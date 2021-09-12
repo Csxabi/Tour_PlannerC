@@ -1,0 +1,15 @@
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\CSTourPlanner.exe.config
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\CSTourPlanner.exe
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\CSTourPlanner.pdb
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\MainWindow.g.cs
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\App.g.cs
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner_MarkupCompile.cache
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner_MarkupCompile.lref
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\MainWindow.baml
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner.g.resources
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner.Properties.Resources.resources
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner.csproj.GenerateResource.cache
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner.exe
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner.pdb
