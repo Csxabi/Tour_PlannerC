@@ -83,10 +83,10 @@
 
                 </Button>
             </StackPanel>
-            <ListBox  Name="ToursListBox" Height="381" Margin="3 3 3 3">
+            <ListBox  Name="ToursListBox" Height="381" Margin="3 3 3 3" FontSize="10" Foreground="GreenYellow" FontFamily="Doppio One">
                 <ListBox.Background>
                     <LinearGradientBrush EndPoint="0.7,1" StartPoint="0.1,0">
-                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="Black" Offset="0.3"/>
                         <GradientStop Color="White" Offset="4"/>
                     </LinearGradientBrush>
                 </ListBox.Background>
