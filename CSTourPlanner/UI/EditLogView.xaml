@@ -1,0 +1,28 @@
+﻿<Window x:Class="CSTourPlanner.UI.EditLogView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSTourPlanner.UI"
+        mc:Ignorable="d"
+      Title="Tour-Planner" Height="300" Width="500" ResizeMode="NoResize" Icon="../ASSETS/icon.ico">
+
+
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.7,1" StartPoint="0,0.7">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="DarkGray" Offset="6"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+        </Grid.RowDefinitions>
+
+    </Grid>
+</Window>

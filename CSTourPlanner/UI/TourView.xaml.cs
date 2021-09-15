@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CSTourPlanner
+namespace CSTourPlanner.UI
 {
     /// <summary>
-    /// MainWindow.xaml etkileşim mantığı
+    /// TourView.xaml etkileşim mantığı
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TourView : Window
     {
-        public MainWindow()
+        public TourView()
         {
             InitializeComponent();
         }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\App.xaml
-11151548125
+2-22888339
 
-5-2017746502
+62007452219
 13-1505183044
-MainWindow.xaml;
+UI\EditLogView.xaml;UI\TourView.xaml;
 
 False
 
