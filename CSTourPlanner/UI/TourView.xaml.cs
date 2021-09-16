@@ -22,6 +22,12 @@ namespace CSTourPlanner.UI
         public TourView()
         {
             InitializeComponent();
+            LogsLV.Items.Add("ali");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new EditLogView().ShowDialog();
         }
     }
 }

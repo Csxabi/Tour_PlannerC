@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSTourPlanner.UI"
         mc:Ignorable="d"
-      Title="Tour-Planner" Height="300" Width="500" ResizeMode="NoResize" Icon="../ASSETS/icon.ico">
+      Title="Tour-Planner" Height="139" Width="500" ResizeMode="NoResize" Icon="../ASSETS/icon.ico">
 
 
     <Window.Background>
@@ -15,7 +15,7 @@
         </LinearGradientBrush>
     </Window.Background>
 
-    <Grid>
+    <Grid Margin="0,0,0,-29" Height="139" VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
 
         </Grid.ColumnDefinitions>
@@ -23,6 +23,49 @@
         <Grid.RowDefinitions>
 
         </Grid.RowDefinitions>
-
+        <WrapPanel Margin="2,2,2,47">
+            <Grid>
+                <WrapPanel Margin="2 2 2 2">
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 2 2" Content="Date      "/>
+                    <TextBox Text="{Binding SelectedLog.Date}" Style="{StaticResource TBStyle}" Margin="10 2 2 2" Width="100"/>
+                </WrapPanel>
+            </Grid>
+            <Grid>
+                <WrapPanel Margin="2 2 2 2">
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 0 2" Content="Duration"/>
+                    <TextBox Text="{Binding SelectedLog.Momentum}" Style="{StaticResource TBStyle}" Margin="0 2 2 2" Width="100"/>
+                </WrapPanel>
+            </Grid>
+            <Grid>
+                <WrapPanel Margin="2 2 2 2">
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 0 2" Content="TotalTime"/>
+                    <TextBox Text="{Binding SelectedLog.TotalTime}" Style="{StaticResource TBStyle}" Margin="2 2 2 2" Width="100"/>
+                </WrapPanel>
+            </Grid>
+            <Grid>
+                <WrapPanel Margin="2 2 2 2">
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 2 2"  Content="Rating" />
+                    <TextBox Text="{Binding SelectedLog.Rating}" Style="{StaticResource TBStyle}" Margin="8 2 2 2" Width="100"/>
+                </WrapPanel>
+            </Grid>
+            <Grid>
+                <WrapPanel Margin="2 2 2 2">
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 2 2" Content="Distance"/>
+                    <TextBox Text="{Binding SelectedLog.Distance}" Style="{StaticResource TBStyle}" Margin="2 2 2 2" Width="100"/>
+                </WrapPanel>
+            </Grid>
+            <Grid>
+                <WrapPanel Margin="2 2 2 2">
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 2 2" Content="Torque"/>
+                    <TextBox Text="{Binding SelectedLog.Torque}" Style="{StaticResource TBStyle}" Margin="13 2 2 2" Width="100"/>
+                </WrapPanel>
+            </Grid>
+            <Grid>
+                <WrapPanel Margin="2 2 2 2">
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 2 2" Content="Joule"/>
+                    <TextBox Text="{Binding SelectedLog.Joule}" Style="{StaticResource TBStyle}" Margin="16 2 2 2" Width="100"/>
+                </WrapPanel>
+            </Grid>
+        </WrapPanel>
     </Grid>
 </Window>
