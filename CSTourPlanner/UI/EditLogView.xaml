@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSTourPlanner.UI"
         mc:Ignorable="d"
-      Title="Tour-Planner" Height="139" Width="500" ResizeMode="NoResize" Icon="../ASSETS/icon.ico">
+      Title="Tour-Planner" Height="139" Width="527" ResizeMode="NoResize" Icon="../ASSETS/icon.ico">
 
 
     <Window.Background>
@@ -15,7 +15,7 @@
         </LinearGradientBrush>
     </Window.Background>
 
-    <Grid Margin="0,0,0,-29" Height="139" VerticalAlignment="Top">
+    <Grid Margin="0,0,-47,-29" Height="139" VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
 
         </Grid.ColumnDefinitions>
@@ -23,16 +23,16 @@
         <Grid.RowDefinitions>
 
         </Grid.RowDefinitions>
-        <WrapPanel Margin="2,2,2,47">
+        <WrapPanel Margin="2,2,0,30">
             <Grid>
                 <WrapPanel Margin="2 2 2 2">
-                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 2 2" Content="Date      "/>
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 2 2" Content="Date   "/>
                     <TextBox Text="{Binding SelectedLog.Date}" Style="{StaticResource TBStyle}" Margin="10 2 2 2" Width="100"/>
                 </WrapPanel>
             </Grid>
             <Grid>
                 <WrapPanel Margin="2 2 2 2">
-                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 0 2" Content="Duration"/>
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 0 2" Content="Momentum"/>
                     <TextBox Text="{Binding SelectedLog.Momentum}" Style="{StaticResource TBStyle}" Margin="0 2 2 2" Width="100"/>
                 </WrapPanel>
             </Grid>
@@ -50,7 +50,7 @@
             </Grid>
             <Grid>
                 <WrapPanel Margin="2 2 2 2">
-                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 2 2" Content="Distance"/>
+                    <Label Style="{StaticResource LabelStyle}" Margin="2 2 2 2" Content="Distance    "/>
                     <TextBox Text="{Binding SelectedLog.Distance}" Style="{StaticResource TBStyle}" Margin="2 2 2 2" Width="100"/>
                 </WrapPanel>
             </Grid>

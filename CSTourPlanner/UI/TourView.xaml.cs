@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSTourPlanner.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace CSTourPlanner.UI
         public TourView()
         {
             InitializeComponent();
-            LogsLV.Items.Add("ali");
+            MessageBox.Show("here "+new DBA().GetTours()[0].TourName + new DBA().GetTours()[0].TourLogs[0].Date);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
