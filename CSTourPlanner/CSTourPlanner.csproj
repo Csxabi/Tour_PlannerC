@@ -115,6 +115,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BL\LoadTourCom.cs" />
+    <Compile Include="BL\ReportToPDFCom.cs" />
+    <Compile Include="BL\SaveTourCom.cs" />
     <Compile Include="DAL\DBA.cs" />
     <Compile Include="M\Log.cs" />
     <Compile Include="M\Tour.cs" />
@@ -157,9 +160,7 @@
   <ItemGroup>
     <Resource Include="icon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="UI\EditLogView.xaml">
       <SubType>Designer</SubType>
