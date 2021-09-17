@@ -1,4 +1,5 @@
 ﻿using CSTourPlanner.DAL;
+using CSTourPlanner.VM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,12 +24,23 @@ namespace CSTourPlanner.UI
         public TourView()
         {
             InitializeComponent();
-            MessageBox.Show("here "+new DBA().GetTours()[0].TourName + new DBA().GetTours()[0].TourLogs[0].Date);
+            ViewModel = new TourViewModel();
+            this.DataContext = ViewModel;
+          
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             new EditLogView().ShowDialog();
+        }
+        private TourViewModel ViewModel;
+
+        private void ToursListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //if(ToursListBox.SelectedItem!=null)
+            ViewModel.Tour = new DBA().GetTours()[0];
+            InitializeComponent();
         }
     }
 }

@@ -124,6 +124,8 @@
     <Compile Include="UI\TourView.xaml.cs">
       <DependentUpon>TourView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VM\EditLogViewModel.cs" />
+    <Compile Include="VM\TourViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -157,7 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BL\" />
-    <Folder Include="VM\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="UI\EditLogView.xaml">
@@ -195,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UI\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ASSETS\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\printer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

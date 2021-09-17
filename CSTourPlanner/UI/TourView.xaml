@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSTourPlanner.UI"
+        xmlns:ViewModels="clr-namespace:CSTourPlanner.VM"
         mc:Ignorable="d"
-        Title="Tour-Planner" Height="500" Width="534" ResizeMode="NoResize" Icon="../ASSETS/icon.ico">
+        Title="Tour-Planner" Height="500" Width="574" ResizeMode="NoResize" Icon="../ASSETS/icon.ico">
+
 
 
     <Window.Background>
@@ -56,11 +58,19 @@
         <DockPanel Grid.ColumnSpan="2" Grid.Row="1">
             <Label Style="{StaticResource LabelStyle}" Content="Search:"></Label>
             <TextBox Style="{StaticResource TBStyle}" Height="15" Width="276" Name="SearchBar" Margin="142 3 0 3"></TextBox>
-            <Button Width="17"  Margin="2 2 2 2">
-                <Button.Background>
-                    <ImageBrush ImageSource="Search.png"/>
-                </Button.Background>
-            </Button>
+            <WrapPanel  Margin="2 2 2 2">
+                <Button Height="17" Width="17" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Search.png"/>
+                    </Button.Background>
+
+                </Button>
+                <Button Margin="2 0 0 0" Height="17" Width="17"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="printer.png"/>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
         </DockPanel>
         <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical">
             <StackPanel Orientation="Horizontal" Height="38">
@@ -83,15 +93,20 @@
 
                 </Button>
             </StackPanel>
-            <ListBox  Name="ToursListBox" Height="381" Margin="3 3 3 3" FontSize="10" Foreground="GreenYellow" FontFamily="Doppio One">
-                <ListBox.Background>
+            <ListView  Name="ToursListBox" Height="381" Margin="3 3 3 3" FontSize="10" SelectedItem="{Binding Tour}" ItemsSource="{Binding AllTours}" Foreground="GreenYellow"  FontFamily="Doppio One" SelectionChanged="ToursListBox_SelectionChanged">
+                <ListView.Background>
                     <LinearGradientBrush EndPoint="0.7,1" StartPoint="0.1,0">
                         <GradientStop Color="Black" Offset="0.3"/>
                         <GradientStop Color="White" Offset="4"/>
                     </LinearGradientBrush>
-                </ListBox.Background>
-
-            </ListBox>
+                </ListView.Background>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Title" DisplayMemberBinding="{Binding TourName}"   Width="80" />
+                        <GridViewColumn Header="Description" DisplayMemberBinding="{Binding TourDescription}"   Width="100" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </StackPanel>
         <Image HorizontalAlignment="Left" Height="182" VerticalAlignment="Top" Width="352" Margin="135,202,0,0" Grid.Row="2"  Grid.ColumnSpan="2" Source="backgorund.png"/>
 
@@ -109,13 +124,13 @@
                         <WrapPanel Orientation="Vertical">
                             <WrapPanel Margin="1 1 1 1" Orientation="Horizontal" Width="306">
                                 <Label Style="{StaticResource LabelStyle}" Content="Title:   "/>
-                                <TextBox Style="{StaticResource TBStyle}"/>
+                                <TextBox Text="{Binding Tour.TourName }"  Style="{StaticResource TBStyle}"/>
                                 <Label Style="{StaticResource LabelStyle}" Content="Distance:"/>
-                                <TextBox Style="{StaticResource TBStyle}" Width="77" />
+                                <TextBox Text="{Binding Tour.TourDistance }"  Style="{StaticResource TBStyle}" Width="77" />
                             </WrapPanel>
                             <WrapPanel Margin="1 1 1 1" Orientation="Horizontal">
                                 <Label Style="{StaticResource LabelStyle}" Content="Route:"/>
-                                <TextBox Style="{StaticResource TBStyle}"/>
+                                <TextBox Text="{Binding Tour.RouteInfo }"  Style="{StaticResource TBStyle}"/>
                             </WrapPanel>
                         </WrapPanel>
 
@@ -125,7 +140,7 @@
                             <Image Margin="4" Height="150" Width="150"></Image>
                             <StackPanel>
                                 <Label Style="{StaticResource LabelStyle}" Content="Tour Description: "/>
-                                <TextBox Style="{StaticResource TBStyle}" Width="83" Height="50"/>
+                                <TextBox Text="{Binding Tour.TourDescription }"  Style="{StaticResource TBStyle}" Width="83" Height="50"/>
                             </StackPanel>
                             
                         </WrapPanel>
@@ -133,10 +148,9 @@
                 </TabItem>
                 <TabItem Header="Description" FontFamily="Doppio One"  Background="Green" Foreground="Black">
                     <StackPanel Orientation="Vertical">
-                        <ListView  x:Name="LogsLV" MinHeight="200"  FontFamily="Doppio One" Foreground="White" Background="Green"  FontSize="9" BorderBrush="White"  ItemsSource="{Binding CurrentTour.Logs}" Margin="2,16,2,5" >
+                        <ListView  x:Name="LogsLV" MinHeight="200"  FontFamily="Doppio One" Foreground="White" Background="Green"  FontSize="9" BorderBrush="White"  ItemsSource="{Binding Tour.TourLogs}" Margin="2,16,2,5" >
                             <ListView.View>
                                 <GridView >
-
                                     <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}"   Width="45" />
                                     <GridViewColumn Header="Distance" DisplayMemberBinding="{Binding Distance}"   Width="50" />
                                     <GridViewColumn Header="TotalTime" DisplayMemberBinding="{Binding TotalTime}"   Width="50" />

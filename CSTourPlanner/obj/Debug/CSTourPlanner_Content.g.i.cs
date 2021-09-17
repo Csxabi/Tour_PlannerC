@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ui/edit.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ui/printer.png")]
 
 
