@@ -35,11 +35,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql, Version=5.0.10.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.5.0.10\lib\netstandard2.0\Npgsql.dll</HintPath>
@@ -127,7 +136,14 @@
     <Compile Include="UI\TourView.xaml.cs">
       <DependentUpon>TourView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BL\AddLogCom.cs" />
+    <Compile Include="BL\AddTourCom.cs" />
+    <Compile Include="BL\DelLogCom.cs" />
+    <Compile Include="BL\DelTourCom.cs" />
+    <Compile Include="BL\EditLogCom.cs" />
     <Compile Include="VM\EditLogViewModel.cs" />
+    <Compile Include="BL\EditTourCom.cs" />
+    <Compile Include="BL\SearchTextCom.cs" />
     <Compile Include="VM\TourViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -50,3 +50,8 @@ C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\S
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\System.ValueTuple.xml
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\CSTourPlanner.csproj.CopyComplete
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\itextsharp.dll
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\Newtonsoft.Json.dll
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\itextsharp.xml
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\Newtonsoft.Json.xml

@@ -49,8 +49,8 @@
                     </LinearGradientBrush>
                 </Menu.Background>
                 <MenuItem Header="_File">
-                    <MenuItem Header="Load" Command="{Binding SaveTourFile}"/>
-                    <MenuItem Header="Save" Command="{Binding LoadTourFIle}"/>
+                    <MenuItem Header="Load" Command="{Binding LoadTourAsFileCommand}"/>
+                    <MenuItem Header="Save" Command="{Binding SaveTourAsFileCommand}"/>
 
                 </MenuItem>
                 <MenuItem Header="_Edit">
@@ -66,13 +66,13 @@
             <Label Style="{StaticResource LabelStyle}" Content="Search:"></Label>
             <TextBox Style="{StaticResource TBStyle}" Height="15" Width="276" Name="SearchBar" Margin="142 3 0 3"></TextBox>
             <WrapPanel  Margin="2 2 2 2">
-                <Button Height="17" Width="17" >
+                <Button Command="{Binding SearchTextCommand}" Height="17" Width="17" >
                     <Button.Background>
                         <ImageBrush ImageSource="Search.png"/>
                     </Button.Background>
 
                 </Button>
-                <Button Margin="2 0 0 0" Height="17" Width="17"  >
+                <Button Command="{Binding ReportAsPdfCommand}" Margin="2 0 0 0" Height="17" Width="17"  >
                     <Button.Background>
                         <ImageBrush ImageSource="printer.png"/>
                     </Button.Background>
@@ -82,18 +82,18 @@
         <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical">
             <StackPanel Orientation="Horizontal" Height="38">
                 <Label Style="{StaticResource LabelStyle}" Margin="2" FontSize="17" Content="Tours" FontWeight="Bold"></Label>
-                <Button  Height="30" Width="30" Margin="3 4 3 0">
+                <Button Command="{Binding AddTourCommand}"  Height="30" Width="30" Margin="3 4 3 0">
                     <Button.Background>
                         <ImageBrush ImageSource="plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button  Height="30" Width="30" Margin="3 4 3 0">
+                <Button Command="{Binding DelTourCommand}" Height="30" Width="30" Margin="3 4 3 0">
                     <Button.Background>
                         <ImageBrush ImageSource="min.png"/>
                     </Button.Background>
 
                 </Button>
-                <Button  Height="30" Width="30" Margin="3 4 3 0">
+                <Button Command="{Binding EditTourCommand}" Height="30" Width="30" Margin="3 4 3 0">
                     <Button.Background>
                         <ImageBrush ImageSource="edit.png"/>
                     </Button.Background>
@@ -155,7 +155,7 @@
                 </TabItem>
                 <TabItem Header="Description" FontFamily="Doppio One"  Background="Green" Foreground="Black">
                     <StackPanel Orientation="Vertical">
-                        <ListView  x:Name="LogsLV" MinHeight="200"  FontFamily="Doppio One" Foreground="White" Background="Green"  FontSize="9" BorderBrush="White"  ItemsSource="{Binding Tour.TourLogs ,Mode=TwoWay}" Margin="2,16,2,5" >
+                        <ListView  x:Name="LogsLV" MinHeight="200" SelectedItem="{Binding Log}"  FontFamily="Doppio One" Foreground="White" Background="Green"  FontSize="9" BorderBrush="White"  ItemsSource="{Binding Tour.TourLogs ,Mode=TwoWay}" Margin="2,16,2,5" >
                             <ListView.View>
                                 <GridView >
                                     <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date }"   Width="45" />
@@ -170,18 +170,18 @@
                         </ListView>
                         <StackPanel Orientation="Horizontal" Height="35" Margin="0,0,2,0">
                             
-                            <Button  Height="30" Width="30" Margin="3 4 3 0">
+                            <Button Command="{Binding AddLogCommand}" Height="30" Width="30" Margin="3 4 3 0">
                                 <Button.Background>
                                     <ImageBrush ImageSource="plus.png"/>
                                 </Button.Background>
                             </Button>
-                            <Button  Height="30" Width="30" Margin="3 4 3 0">
+                            <Button Command="{Binding DelLogCommand}" Height="30" Width="30" Margin="3 4 3 0">
                                 <Button.Background>
                                     <ImageBrush ImageSource="min.png"/>
                                 </Button.Background>
 
                             </Button>
-                            <Button  Height="30" Width="30" Margin="3 4 3 0" Click="Button_Click">
+                            <Button Command="{Binding EditLogCommand}" Height="30" Width="30" Margin="3 4 3 0" Click="Button_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="edit.png"/>
                                 </Button.Background>

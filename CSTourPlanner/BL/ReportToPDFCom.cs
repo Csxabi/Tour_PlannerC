@@ -1,12 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Input;
 
-namespace CSTourPlanner.BL
+namespace CSTourPlanner.VM
 {
-    class ReportToPDFCom
+    internal class ReportToPDFCom : ICommand
     {
+        private TourViewModel _TourViewModel;
+
+        public ReportToPDFCom(TourViewModel mainViewModel)
+        {
+            _TourViewModel = mainViewModel;
+        }
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public void Execute(object parameter)
+        {
+            _TourViewModel.ReportAsPdf();
+        }
     }
 }
