@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\asus\source\repos\CSTourPlanner\CSTourPlanner\obj\Debug\
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\obj\Debug\
 CSTourPlanner
 none
 false
 DEBUG;TRACE
-C:\Users\asus\source\repos\CSTourPlanner\CSTourPlanner\App.xaml
-11151548125
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\App.xaml
+2-22888339
 
-61434861427
-13-1505183044
-MainWindow.xaml;
+241647259157
+146318609566
+UI\EditLogView.xaml;UI\TourView.xaml;
 
-True
+False
 
