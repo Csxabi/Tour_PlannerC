@@ -110,7 +110,7 @@ namespace CSTourPlanner.VM
 
                 AllTours.Add(LoadedTour);
                 tour = LoadedTour;
-                ///  DataAcessLayer.DatabaseApi.InsertTour(CurrentTour, Tours.Count + 1); inser to database implament latter on inserting ***
+                  new DBA().InsertATour(tour);
             }
             else System.Windows.MessageBox.Show("File does not exist at " + path);
         }
@@ -119,13 +119,16 @@ namespace CSTourPlanner.VM
         public void AddTour()
         {
             AllTours.Add(Tour);
+            new DBA().InsertATour(tour);
         }
       
         public ICommand DelTourCommand { get; set; }
      
         public void DelTour()
         {
+            new DBA().DeleteTour(tour);
             AllTours.Remove(tour);
+            
         }
         public ICommand EditTourCommand { get; set; }
         public void EditTour()

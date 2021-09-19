@@ -57,3 +57,6 @@ C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\i
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\Newtonsoft.Json.xml
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\log4net.dll
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\log4net.xml
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\App.config
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\nunit.framework.dll
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\nunit.framework.xml

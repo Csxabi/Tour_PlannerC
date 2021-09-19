@@ -40,5 +40,14 @@ namespace CSTourPlanner.DAL
                 return Connection.Query<Log>("SELECT * FROM public.\"Log\" WHERE \"TourID\"=" + TourID).ToList();           
         }
 
+        public void DeleteTour(Tour tour)
+        {
+            Connection.Query("CALL public.delete_tour(" + tour.TourID + ")");
+        }
+
+        public void InsertATour(Tour tour)
+        {
+            Connection.Query("CALL public.insert_tour(" + tour.TourID + ",'" + tour.TourName + "','" + tour.TourDescription + "','" + tour.RouteInfo + "','" + tour.TourDistance + "')");
+        }
     }
 }
