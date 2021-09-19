@@ -64,7 +64,7 @@
         </DockPanel>
         <DockPanel Grid.ColumnSpan="2" Grid.Row="1">
             <Label Style="{StaticResource LabelStyle}" Content="Search:"></Label>
-            <TextBox Style="{StaticResource TBStyle}" Height="15" Width="276" Name="SearchBar" Margin="142 3 0 3"></TextBox>
+            <TextBox Text="{Binding SearchTextstring ,Mode=TwoWay}" Style="{StaticResource TBStyle}" Height="15" Width="276" Name="SearchBar" Margin="142 3 0 3"></TextBox>
             <WrapPanel  Margin="2 2 2 2">
                 <Button Command="{Binding SearchTextCommand}" Height="17" Width="17" >
                     <Button.Background>
@@ -137,14 +137,15 @@
                             </WrapPanel>
                             <WrapPanel Margin="1 1 1 1" Orientation="Horizontal">
                                 <Label Style="{StaticResource LabelStyle}" Content="Route:"/>
-                                <TextBox Text="{Binding Tour.RouteInfo ,Mode=TwoWay }"  Style="{StaticResource TBStyle}"/>
+                                <TextBox Name="Routeb" Text="{Binding Tour.RouteInfo ,Mode=TwoWay }"  Style="{StaticResource TBStyle}"/>
+                                <Button Click="MapLoadBtn" Background="Green" Margin="10 0 0 0" Width="20" Height="20" Content="GO"></Button>
                             </WrapPanel>
                         </WrapPanel>
 
 
                         <WrapPanel Margin="1 1 1 1" Orientation="Horizontal">
                             <Label Style="{StaticResource LabelStyle}" Content="Map: "/>
-                            <Image Margin="4" Height="150" Width="150"></Image>
+                            <Image Name="mapImage" Margin="4" Height="150" Width="150"></Image>
                             <StackPanel>
                                 <Label Style="{StaticResource LabelStyle}" Content="Tour Description: "/>
                                 <TextBox Text="{Binding Tour.TourDescription ,Mode=TwoWay }"  Style="{StaticResource TBStyle}" Width="83" Height="50"/>

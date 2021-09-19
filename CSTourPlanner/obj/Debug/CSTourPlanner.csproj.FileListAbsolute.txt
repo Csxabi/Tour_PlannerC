@@ -55,3 +55,5 @@ C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\i
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\Newtonsoft.Json.dll
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\itextsharp.xml
 C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\Newtonsoft.Json.xml
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\log4net.dll
+C:\Users\asus\source\repos\CSTourPlanner\Tour_PlannerC\CSTourPlanner\bin\Debug\log4net.xml

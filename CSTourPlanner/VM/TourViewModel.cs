@@ -19,6 +19,13 @@ namespace CSTourPlanner.VM
 {
     public class TourViewModel : INotifyPropertyChanged
     {
+        private string _SearchTextstring;
+
+        public string SearchTextstring
+        {
+            get { return _SearchTextstring; }
+            set { _SearchTextstring = value; NotifyPropertyChanged("SearchTextstring"); }
+        }
 
         private Tour tour;
         public Tour Tour
@@ -50,6 +57,8 @@ namespace CSTourPlanner.VM
                 AllTours.Add(tour);
            
             }
+            Singleton singleton = Singleton.GetLastObject();
+            singleton.Tour = Tour;
 
             #region commands
             AddTourCommand = new AddTourCom(this);
@@ -166,7 +175,22 @@ namespace CSTourPlanner.VM
         public ICommand SearchTextCommand { get; set; }
         public void SearchText()
         {
+            if (SearchTextstring != "")
+            {
+                string result = "";
+                List<Tour> tours = AllTours.ToList().FindAll(x => x.TourName.StartsWith(SearchTextstring));
+                if (tours != null)
+                {
+                    foreach (Tour tour in tours)
+                    {
+                        result += "Tour Found : " + tour.TourName + "\nTour Description: " + tour.TourDescription +"\n";
+                    }
 
+                }
+                if (result.Length > 4) System.Windows.MessageBox.Show(result);
+                else System.Windows.MessageBox.Show("Tour Not Found...");
+
+            }
         }
 
     }
