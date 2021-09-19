@@ -6,9 +6,16 @@
         xmlns:local="clr-namespace:CSTourPlanner.UI"
         xmlns:ViewModels="clr-namespace:CSTourPlanner.VM"
         mc:Ignorable="d"
-        Title="Tour-Planner" Height="500" Width="574" ResizeMode="NoResize" Icon="../ASSETS/icon.ico">
+        
+        Title="Tour-Planner" Height="500" ResizeMode="NoResize"  Width="574" Icon="../ASSETS/icon.ico">
 
-
+    <Window.Resources>
+        <ViewModels:TourViewModel x:Key="TourViewModel"/>
+    </Window.Resources>
+    
+    <Window.DataContext>
+        <ViewModels:TourViewModel/>
+    </Window.DataContext>
 
     <Window.Background>
         <LinearGradientBrush EndPoint="0.7,1" StartPoint="0,0.7">
@@ -17,7 +24,7 @@
         </LinearGradientBrush>
     </Window.Background>
 
-    <Grid>
+    <Grid DataContext="{Binding Source={StaticResource TourViewModel}}">
         <Grid.ColumnDefinitions>
 
             <ColumnDefinition Width="13*"/>
@@ -93,7 +100,7 @@
 
                 </Button>
             </StackPanel>
-            <ListView  Name="ToursListBox" Height="381" Margin="3 3 3 3" FontSize="10" SelectedItem="{Binding Tour}" ItemsSource="{Binding AllTours}" Foreground="GreenYellow"  FontFamily="Doppio One" SelectionChanged="ToursListBox_SelectionChanged">
+            <ListView  Name="ToursListBox" Height="381" Margin="3 3 3 3" FontSize="10" SelectedItem="{Binding Tour,Mode=TwoWay}" ItemsSource="{Binding AllTours,Mode=TwoWay}" Foreground="GreenYellow"  FontFamily="Doppio One" SelectionChanged="ToursListBox_SelectionChanged">
                 <ListView.Background>
                     <LinearGradientBrush EndPoint="0.7,1" StartPoint="0.1,0">
                         <GradientStop Color="Black" Offset="0.3"/>
@@ -124,13 +131,13 @@
                         <WrapPanel Orientation="Vertical">
                             <WrapPanel Margin="1 1 1 1" Orientation="Horizontal" Width="306">
                                 <Label Style="{StaticResource LabelStyle}" Content="Title:   "/>
-                                <TextBox Text="{Binding Tour.TourName }"  Style="{StaticResource TBStyle}"/>
+                                <TextBox Text="{Binding Tour.TourName, Mode=TwoWay}"  Style="{StaticResource TBStyle}"/>
                                 <Label Style="{StaticResource LabelStyle}" Content="Distance:"/>
-                                <TextBox Text="{Binding Tour.TourDistance }"  Style="{StaticResource TBStyle}" Width="77" />
+                                <TextBox Text="{Binding Tour.TourDistance ,Mode=TwoWay }"  Style="{StaticResource TBStyle}" Width="77" />
                             </WrapPanel>
                             <WrapPanel Margin="1 1 1 1" Orientation="Horizontal">
                                 <Label Style="{StaticResource LabelStyle}" Content="Route:"/>
-                                <TextBox Text="{Binding Tour.RouteInfo }"  Style="{StaticResource TBStyle}"/>
+                                <TextBox Text="{Binding Tour.RouteInfo ,Mode=TwoWay }"  Style="{StaticResource TBStyle}"/>
                             </WrapPanel>
                         </WrapPanel>
 
@@ -140,7 +147,7 @@
                             <Image Margin="4" Height="150" Width="150"></Image>
                             <StackPanel>
                                 <Label Style="{StaticResource LabelStyle}" Content="Tour Description: "/>
-                                <TextBox Text="{Binding Tour.TourDescription }"  Style="{StaticResource TBStyle}" Width="83" Height="50"/>
+                                <TextBox Text="{Binding Tour.TourDescription ,Mode=TwoWay }"  Style="{StaticResource TBStyle}" Width="83" Height="50"/>
                             </StackPanel>
                             
                         </WrapPanel>
@@ -148,10 +155,10 @@
                 </TabItem>
                 <TabItem Header="Description" FontFamily="Doppio One"  Background="Green" Foreground="Black">
                     <StackPanel Orientation="Vertical">
-                        <ListView  x:Name="LogsLV" MinHeight="200"  FontFamily="Doppio One" Foreground="White" Background="Green"  FontSize="9" BorderBrush="White"  ItemsSource="{Binding Tour.TourLogs}" Margin="2,16,2,5" >
+                        <ListView  x:Name="LogsLV" MinHeight="200"  FontFamily="Doppio One" Foreground="White" Background="Green"  FontSize="9" BorderBrush="White"  ItemsSource="{Binding Tour.TourLogs ,Mode=TwoWay}" Margin="2,16,2,5" >
                             <ListView.View>
                                 <GridView >
-                                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}"   Width="45" />
+                                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date }"   Width="45" />
                                     <GridViewColumn Header="Distance" DisplayMemberBinding="{Binding Distance}"   Width="50" />
                                     <GridViewColumn Header="TotalTime" DisplayMemberBinding="{Binding TotalTime}"   Width="50" />
                                     <GridViewColumn Header="Rating" DisplayMemberBinding="{Binding Rating}"   Width="35" />

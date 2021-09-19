@@ -14,9 +14,20 @@ namespace CSTourPlanner.VM
     public class TourViewModel : INotifyPropertyChanged
     {
 
-        public Tour Tour { get; set; }
-        public ObservableCollection<Tour> AllTours { get; set; }
+        private Tour tour;
+        public Tour Tour
+        {
+            get { return tour; }
+            set { tour = value; NotifyPropertyChanged("Tour"); }
+        }
+       
+        private ObservableCollection<Tour> _AllTours;
 
+        public ObservableCollection<Tour> AllTours
+        {
+            get { return _AllTours; }
+            set { _AllTours = value; NotifyPropertyChanged("AllTours"); }
+        }
         public TourViewModel()
         {
             AllTours = new ObservableCollection<Tour>();
@@ -33,9 +44,13 @@ namespace CSTourPlanner.VM
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged([CallerMemberName] string prop = null)
+        protected void NotifyPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
+
     }
 }

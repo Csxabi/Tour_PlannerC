@@ -40,7 +40,7 @@ namespace CSTourPlanner.UI
         {
             //if(ToursListBox.SelectedItem!=null)
             ViewModel.Tour = new DBA().GetTours()[0];
-            InitializeComponent();
+     
         }
     }
 }

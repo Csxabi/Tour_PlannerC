@@ -30,6 +30,7 @@ namespace CSTourPlanner.DAL
             }
             return tours;
         }
+
         public List<Log> GetlogsofTour(int TourID)
         {           
                 return Connection.Query<Log>("SELECT * FROM public.\"Log\" WHERE \"TourID\"=" + TourID).ToList();           
